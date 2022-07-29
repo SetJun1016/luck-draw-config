@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import components from './modules/components'
-import menu from "./modules/menu"
-import excel from './modules/excel'
+// import components from './modules/components'
+// import menu from "./modules/menu"
+// import excel from './modules/excel'
+import active from './modules/active'
 import { getToken } from '../until/auth'
 
 export const Layout = () => import('../Layout/index.vue')
@@ -23,9 +24,10 @@ export const routes: Array<RouteRecordRaw> = [
             meta: { title: 'dashboard', icon: 'el-icon-eleme', }
         }]
     },
-    components,
-    excel,
-    menu
+    active
+    // components,
+    // excel,
+    // menu
 ]
 // 在 Vue-router新版本中，需要使用createRouter来创建路由
 export const router = createRouter({
